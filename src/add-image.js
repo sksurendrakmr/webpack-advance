@@ -1,6 +1,7 @@
 import newYork from './newyork.jpg';
 
 function addImage() { 
+    console.log("Add image");
     const img = document.createElement('img');
     img.alt = "newyork"
     img.width=300;

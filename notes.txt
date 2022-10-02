@@ -64,3 +64,35 @@ type property can take either one of these values:-
 2. asset/inline
 3. asset/resource
 4. asset
+
+
+
+
+======
+publicPath
+======
+public path tells webpack which URL to use in order to load all the 
+generated files in the browser.
+
+E.g. If we are using a static file like images in application, we 
+can tell the browser where those static files should be taken from
+using publicPath configuration options.
+
+From v5, we don't much have to worry about this option in simple cases.
+
+From v5, by default webpack set publicPath property to 'auto'
+In previous version, the default was empty string.(Thus, in previous version, image was not loaded automatically)
+
+By default, webpack uses the filename of the generated image without
+the proper path of the image.
+
+In order to fix that, we can change the public path to tell webpack
+where it can take the image from.
+
+
+There are some cases when publicPath should be specified explicitly.
+What if we are serving static files from some kind of CDN.
+
+What if we get the image as a special URL prefix from the server to serve static files.
+
+in module federation feaure.
