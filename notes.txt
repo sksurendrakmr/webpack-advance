@@ -96,3 +96,25 @@ What if we are serving static files from some kind of CDN.
 What if we get the image as a special URL prefix from the server to serve static files.
 
 in module federation feaure.
+
+
+asset/inline module type
+==========
+asset/inline module doesn't generate a new file in the output directory.
+Instead it will generate a base64 representation of file and bake it direclty
+into the javascript bundle.
+
+Asset/inline can be used when importing small asset files like SVG.
+
+we can also use it for large file size but that will make javascript bundle more bigger.
+
+since asset/resource will generate a sparate file for every image we are using.
+This make browser to make a sepereate HTTP request for each image it needs to display.
+
+if there are 20 images on a page, browser would need to make 20 additional HTTP requests
+in order to display all those images.
+
+and it will make sense if we have 20 very large images.
+
+However if we have 20 small SVG then the cost of making 20 extra HTTP request is much higher than benefits. 
+In this case we can use asset/inline type and webpack will inline into the main javascript bundle. 
