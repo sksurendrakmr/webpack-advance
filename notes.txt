@@ -1,0 +1,50 @@
+Asset Modules
+======
+Asset modules is a new feature introduced in webpack 5.
+It allow us to use asset files in our javascript application
+without installing additional dependencies.
+
+However, we still need to make changes to our webpack 
+configuration in order to teach webpack how to import those
+asset files. (images, plain text,fonts)
+
+
+There are four types of asset modules we can use
+===
+1. asset/resource
+    ======
+    Emit files into the output directory and exports the URL to that file.
+    
+    This type of asset module can be used to import large images or large font files.
+
+2. asset/inline
+    ===
+    Inline the file into the bundle as a data URI.
+    
+    It can be used when importing small asset files like SVG.
+    
+    Usually SVG are injected into the javascript bundle as the data URI.
+    
+    It doesn't generate a new file in the output folder.
+
+3. asset 
+    ===
+    Serves as a combination of the previous two asset types.
+    
+    If we decide to use a general asset type, webpack will automatically
+    choose between asset resource and asset inline.
+    
+    If the file size is less then 8KB, this file will be treated as inline asset module,
+    else resource asset module.
+
+    We can configure the size to anything we want.
+
+4. asset/source
+    ===
+    Sometime, we need to import some plaintext data as a javascript string.
+    E.g. a text file that has some data as plain text.
+
+    Import the source code of the file as it is and injects it into
+    the javascript bundle as a string of text.
+
+
