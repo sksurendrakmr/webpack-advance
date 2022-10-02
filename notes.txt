@@ -48,3 +48,19 @@ There are four types of asset modules we can use
     the javascript bundle as a string of text.
 
 
+asset/resource
+======
+we will import an image in js file.
+
+webpack by default doesn't know how to import image in js file.
+we need to teach webpack by configuring in webpack.config.js file i.e.
+add special rule which will tell webpack how to import image files
+inside the webpack configuration file.
+
+asset module require the type property inside of use property inside rules array.
+
+type property can take either one of these values:-
+1. asset/source
+2. asset/inline
+3. asset/resource
+4. asset
