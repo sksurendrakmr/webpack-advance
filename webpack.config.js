@@ -69,6 +69,12 @@ module.exports = {
         //         path.join(process.cwd(),'build/**/*') //it will remove the files from build folder which is outside the output directory
         //     ]
         // })
-        new HTMLWebpackPlugin()
+        new HTMLWebpackPlugin({
+            title:"New Title side",
+            // filename:'subfolder/custom_filename.html',
+            meta:{
+                description:'some description'
+            }
+        })
     ]
 }
