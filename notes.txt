@@ -188,4 +188,32 @@ To make webpack bundle size smaller, we will use a plugin called Terser plugin.
 Terser plugin comes with webpack so we don't need to add additional npm package.
 
 
+====
+Extracting CSS into a seperate bundle.
+====
+with css-loader and style-loader, all styles are bundled together 
+with javascript code inside a single file called bundle.js.
+
+styles are dynamically added to the DOM by javascript during runtime.
+
+However, this approach may increase the bundle size.
+
+Instead, we can extract all our CSS into a separeate file that
+will be generated alongside js bundle.
+
+With above approach, 
+->It will make the size of js bundle much smaller and it will 
+  download faster.
+
+-> It will allow us to load multiple files in parallel, making overall experience 
+    even better.
+
+
+    mini-css-extract-plugin
+    ===
+    This will tell webpack to extract css into a separate file and we can even specify the name of the file.
+    npm i -D mini-css-extract-plugin
+
+
+
 
