@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
@@ -68,5 +69,6 @@ module.exports = {
         //         path.join(process.cwd(),'build/**/*') //it will remove the files from build folder which is outside the output directory
         //     ]
         // })
+        new HTMLWebpackPlugin()
     ]
 }
