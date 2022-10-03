@@ -117,4 +117,30 @@ in order to display all those images.
 and it will make sense if we have 20 very large images.
 
 However if we have 20 small SVG then the cost of making 20 extra HTTP request is much higher than benefits. 
-In this case we can use asset/inline type and webpack will inline into the main javascript bundle. 
+In this case we can use asset/inline type and webpack will inline into the main javascript bundle.
+
+
+====
+General asset type
+====
+-> Asset resource type generates a new file in the output directory
+   for each of your assets and exports the URL to that file.
+
+-> Asset inline module type generates a base64 representation of asset and injects 
+   the base64 string directly into main javascript bundle.
+
+-> We should use asset/resource when importing large files and the second 
+   when importing small files.
+
+-> General Asset type (Asset) -: Combination of asset/resource and asset/inline.
+   If we are using general asset type, webpack will automatically choose between asset/resource 
+   and asset/inline.
+   
+   Webpack will make this decision based on size of each file.
+
+   If the file size if less than 8KB, the file will be treated as an inline asset,
+   else resource asset.
+
+   We have a way to change this number from 8KB to anything we want.
+
+
