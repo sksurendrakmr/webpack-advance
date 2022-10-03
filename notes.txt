@@ -215,5 +215,19 @@ With above approach,
     npm i -D mini-css-extract-plugin
 
 
+===
+Browser caching
+===
+Since, everytime browser loads a website, it downloads all the assets required by the website.
+
+If the file didn't change between the page reload, browser can save it in a specific place called cache.
+
+This may lead to another issue.
+What if we fix a bug and the javascript file is changed.
+If the browser always takes the files from cache then the user will never get the updated code.
+Therefore, we need a mechanism to update the cache.
+One of the popular approach is creating a new file with new name each time we make a change as browser remember files with a name.
+webpack can do this automatically.  
+
 
 
