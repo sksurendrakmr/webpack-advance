@@ -156,3 +156,17 @@ asset/source module type
    any file in the output directory.
 
 
+====
+Loaders
+=====
+Loaders allow us to import all other kind of files that we can't handle
+using Asset modules.
+
+**Webpack was designed to help us bundle all our dependencies into one or more files.
+
+webpack processes loader from right to left.
+
+npm i -D @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-class-properties
+
+
+
