@@ -169,4 +169,23 @@ webpack processes loader from right to left.
 npm i -D @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-class-properties
 
 
+====
+Plugins
+====
+Plugins are additional javascript libraries that do everything that loaders cannot do.
+
+Plugins can also modify how the bundles themeselves are created.
+E.g. ugliyJsPlugin takes the bundle.js and minimizes the contents to decrease the bundle size.
+
+
+===
+Minification of the resulting webpack bundle
+====
+1. To load the web faster.
+2. It will consume less Internet traffic.
+
+To make webpack bundle size smaller, we will use a plugin called Terser plugin.
+Terser plugin comes with webpack so we don't need to add additional npm package.
+
+
 
