@@ -227,7 +227,19 @@ What if we fix a bug and the javascript file is changed.
 If the browser always takes the files from cache then the user will never get the updated code.
 Therefore, we need a mechanism to update the cache.
 One of the popular approach is creating a new file with new name each time we make a change as browser remember files with a name.
-webpack can do this automatically.  
+webpack can do this automatically.
+
+
+Create dist folder before creating new bundle.
+==========
+How we can remove bundles from dist folder before creating a new bundle.
+Webpack has a plugin for that called clean-webpack-plugin.
+
+
+Each time we run the build command, clean-webpack-plugin will clean(remove all the files) the output 
+path folder(in our case dist folder).
+
+npm i -D clean-webpack-plugin
 
 
 
