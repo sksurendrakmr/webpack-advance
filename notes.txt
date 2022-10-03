@@ -144,3 +144,15 @@ General asset type
    We have a way to change this number from 8KB to anything we want.
 
 
+=========
+asset/source module type
+=========
+
+-> Asset source reads the contents of the file into a 
+   javascript string and injects that string directly
+   bundle as is without any modifications.
+
+-> Similary to asset/inline, this module doesn't generate 
+   any file in the output directory.
+
+

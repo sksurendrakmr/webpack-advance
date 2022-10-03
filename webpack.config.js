@@ -21,6 +21,10 @@ module.exports = {
             {
                 test: /\.(ttf)$/,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.txt/,
+                type: 'asset/source'
             }
         ]
     }
